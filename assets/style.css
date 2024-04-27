@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28788a;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+
+}
+
+.logo > .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95px;
+
+    transition:0.5s ease-out;
+}
+
+header img{
+    height: 80px;
+    width: 80px;
+    transition:0.5s ease-in-out;
+    transform: translateY(5%);
+    &:hover{
+        transform: scale(1.2) translateY(-5%);
+
+    }
+}
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin-right: 10px;
+    
+    transition:0.5s ease-out;
+    left: 0;
+
+}
+
+.opciones > a{
+    width: 120px;
+}
+
+.iniciar{
+    background-color:#0555FC;
+    padding: 7px 15px;
+    text-align: center;
+    border-radius: 5px;
+    width: auto;
+    &:hover{
+        background-color:#4a82fa;
+    }
+}
+
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
+
+}
+  
+  
+.menu-toggle > .linea {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+  
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: baseline; 
+    align-items: center;  
+    width: 100vw;
+    background: linear-gradient(to right, #bbbbbb, #ffffff, #bbbbbb);  
+}
+
+main .inicio{
+    display: flex;
+    align-items: center;
+}
+
+main .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inicio >  img{
+    transition: 0.5s;
+}
+.slogan .texto{
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slogan .texto h1{
+    color: #5e5e5e;
+}
+.slogan a{
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+.acercaDe{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20%;
+    text-align: center;
+    align-items: center;
+
+}
+
+.acercaDe .texto{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.acercaDe .texto > p{
+    color: #000
+}
+
+.acercaDe .texto p{
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.acercaDe > img{
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .logo{
+        display: none;
+        justify-content: space-between;
+    
+    }
+
+  .menu-toggle {
+    display: block;
+    z-index: 2; 
+  }
+
+
+  .opciones {
+    position: absolute;
+    display: none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(26, 58, 58);
+    bottom: 0px;
+    z-index: 1;
+  }
+  main{
+    width: auto;
+    flex-direction: column;
+  }
+  .inicio{
+    display: flex;
+    flex-direction: column;
+    width:60vw;
+  }
+  .inicio >  img{
+    transition: 0.5s;
+    transform: scale(0.5);
+    }   
+.inicio .slogan{
+        height:100%;
+        width: 70%;
+
+    }
+    .inicio .slogan .texto{
+        text-align: center;
+    }
+  .opciones > a{
+    width: 100%;
+    text-align: center;
+  }
+
+  .opciones.active {
+    display: flex; 
+    overflow: hidden;
+  }
+  main .acercaDe .texto{
+    width: 100%;
+}
+}
+
+
+
